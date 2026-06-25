@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FitnessHelper</string>
+    <string name="zero_time">00:00</string>
+    <string name="exercise_number">%1$d. %2$s</string>
+    <string name="exercise_details">Подходы: %1$dx%2$d, Вес: %3$.1f кг</string>
+    <string name="select_role">Выберите роль</string>
+    <string name="select_trainer">Выберите тренера</string>
+    <string name="trainer_in_development">Тренерский интерфейс в разработке</string>
+
+    <string-array name="roles_array">
+        <item>CLIENT</item>
+        <item>TRAINER</item>
+    </string-array>
+</resources>
