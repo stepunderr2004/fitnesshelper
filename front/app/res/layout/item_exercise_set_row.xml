@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="4dp"
+    android:paddingVertical="2dp"
+    android:background="@drawable/field_border"
+    android:layout_marginBottom="2dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Подход "
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/setNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/setReps"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:background="@drawable/field_border"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/setWeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="20"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:background="@drawable/field_border"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="4dp" />
+
+    <ImageButton
+        android:id="@+id/copyDownButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/arrow_down_float"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Копировать вниз"
+        android:padding="2dp" />
+
+    <ImageButton
+        android:id="@+id/addSetButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/ic_input_add"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Добавить подход"
+        android:padding="2dp" />
+
+    <ImageButton
+        android:id="@+id/deleteSetButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Удалить подход"
+        android:padding="2dp" />
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Календарь + 6 кнопок-стрелок слева -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Контейнер кнопок-стрелок с отступом сверху -->
+        <LinearLayout
+            android:id="@+id/weekButtonsContainer"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="top"
+            android:paddingTop="86dp"
+            android:background="#F0F0F0">
+
+            <ImageButton
+                android:id="@+id/weekButton0"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:src="@drawable/ic_arrow_right"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Применить шаблон к неделе 1"
+                app:tint="#000000" />
+            <ImageButton
+                android:id="@+id/weekButton1"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:src="@drawable/ic_arrow_right"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Применить шаблон к неделе 2"
+                app:tint="#000000" />
+            <ImageButton
+                android:id="@+id/weekButton2"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:src="@drawable/ic_arrow_right"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Применить шаблон к неделе 3"
+                app:tint="#000000" />
+            <ImageButton
+                android:id="@+id/weekButton3"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:src="@drawable/ic_arrow_right"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Применить шаблон к неделе 4"
+                app:tint="#000000" />
+            <ImageButton
+                android:id="@+id/weekButton4"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:src="@drawable/ic_arrow_right"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Применить шаблон к неделе 5"
+                app:tint="#000000" />
+            <ImageButton
+                android:id="@+id/weekButton5"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:src="@drawable/ic_arrow_right"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Применить шаблон к неделе 6"
+                app:tint="#000000" />
+        </LinearLayout>
+
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Панель информации о выбранном дне -->
+    <LinearLayout
+        android:id="@+id/dayInfoPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/program_border"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/dayInfoTitle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/editDayButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Изменить" />
+            <ImageButton
+                android:id="@+id/closeDayInfoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Закрыть" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp">
+            <LinearLayout
+                android:id="@+id/dayInfoContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Шаблоны расписания -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Шаблоны расписания"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <LinearLayout
+        android:id="@+id/templatesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <Button
+        android:id="@+id/createTemplateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Создать расписание" />
+</LinearLayout>

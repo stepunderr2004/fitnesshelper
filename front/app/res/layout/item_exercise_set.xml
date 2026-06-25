@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="4dp"
+    android:layout_marginBottom="2dp">
+
+    <TextView
+        android:id="@+id/setInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Подход 1: 10 x 50"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/addSetButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/ic_input_add"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Добавить подход"
+        android:padding="2dp" />
+
+    <ImageButton
+        android:id="@+id/deleteSetButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Удалить подход"
+        android:padding="2dp" />
+</LinearLayout>

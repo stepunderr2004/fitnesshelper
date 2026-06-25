@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingHorizontal="16dp">
+
+    <!-- Блок с основной кнопкой и таймером -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="Начать тренировку"
+            android:textSize="18sp"
+            android:backgroundTint="#FF6200EE"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="Пауза"
+            android:textSize="18sp"
+            android:backgroundTint="#FFFFA726"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/resumeButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="▶"
+            android:textSize="24sp"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginEnd="4dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/finishButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="⏹"
+            android:textSize="24sp"
+            android:backgroundTint="#F44336"
+            android:layout_marginStart="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="00:00"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Блок выбора источника -->
+    <LinearLayout
+        android:id="@+id/sourceSelectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выберите программу на сегодня:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/myProgramButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Моя программа"
+                android:background="@drawable/program_border" />
+
+            <Button
+                android:id="@+id/myTrainingButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Моя тренировка"
+                android:background="@drawable/program_border"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Блок упражнений во время тренировки -->
+    <LinearLayout
+        android:id="@+id/exerciseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/currentExerciseInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@drawable/program_border"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/currentExerciseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/currentExerciseDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Подходы: 3x10, Вес: 50.0 кг" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/prevExerciseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Назад"
+                android:enabled="false"
+                android:alpha="0.5" />
+
+            <Button
+                android:id="@+id/nextExerciseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вперёд"
+                android:enabled="true"
+                android:alpha="1.0"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Фиксированная высота для списка подходов с прокруткой -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/oval_border"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/allExercisesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

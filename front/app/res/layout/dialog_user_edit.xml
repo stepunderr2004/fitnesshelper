@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Логин"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Имя"
+            android:inputType="text"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/editAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Возраст"
+            android:inputType="number"
+            android:layout_marginTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/editGenderGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/editMale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Мужской" />
+
+            <RadioButton
+                android:id="@+id/editFemale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Женский" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/editRoleSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:prompt="@string/select_role" />
+
+        <TextView
+            android:id="@+id/trainerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Тренер"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/editTrainerSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/select_trainer" />
+    </LinearLayout>
+</ScrollView>

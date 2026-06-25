@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="16dp">
+
+    <com.applandeo.materialcalendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Панель выбора времени -->
+    <LinearLayout
+        android:id="@+id/timeSelectionPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выберите время тренировки:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/timeButtonsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center" />
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bookTrainingButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Записаться на тренировку"
+        android:enabled="false" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#FF5722"
+        android:textSize="14sp" />
+</LinearLayout>
