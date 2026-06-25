@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_schedule"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Расписание" />
+    <item
+        android:id="@+id/navigation_programs_trainer"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Программы" />
+    <item
+        android:id="@+id/navigation_clients"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="Клиенты" />
+    <item
+        android:id="@+id/navigation_diary_trainer"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="Дневник" />
+    <item
+        android:id="@+id/navigation_profile_trainer"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="Профиль" />
+</menu>
