@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "941263304200",
+    "project_id": "fitnesshelper-9a364",
+    "storage_bucket": "fitnesshelper-9a364.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941263304200:android:a6b0805a479d45263643bd",
+        "android_client_info": {
+          "package_name": "com.example.fitnesshelper"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEFxiqDvXI0z99NzFLh028okiAMZz0Nuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
